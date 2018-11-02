@@ -1,0 +1,1 @@
+"0","ggplot(Top_Ten1, aes(x=EVTYPE, y=health_loss)) + geom_bar(stat=""identity"")"

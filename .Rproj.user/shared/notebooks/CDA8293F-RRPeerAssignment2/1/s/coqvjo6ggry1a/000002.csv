@@ -1,0 +1,5 @@
+"0","SD_ECL <- group_by(SD_ECL, EVTYPE)"
+"0","SD_ECL_sum <- mutate(SD_ECL, SUM = PROPDMG + CROPDMG)"
+"0","SD_ECL_sum <- summarize(SD_ECL_sum, PropLoss = sum(SUM))"
+"0","SD_ECL_sum <- arrange(SD_ECL_sum, desc(PropLoss))"
+"0","Top_TenPL <- head(SD_ECL_sum,10)"

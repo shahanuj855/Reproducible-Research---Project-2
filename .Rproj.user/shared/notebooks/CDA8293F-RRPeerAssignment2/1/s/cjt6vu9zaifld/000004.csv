@@ -1,0 +1,6 @@
+"0","StormData_df <- tbl_df(StormData) #transform to df for dplyr ops"
+"0","#Across the United States, which types of events (as indicated in the EVTYPE variable) are most harmful with respect to population health?"
+"0","SDby_EV <- group_by(StormData_df, EVTYPE)    #group all same EV rows"
+"0","SDby_EV_sum <- mutate(SDby_EV, total_aff = FATALITIES + INJURIES) #add a variable for total health_loss"
+"0","SDby_EV_mod <- select(SDby_EV_sum,EVTYPE, FATALITIES, INJURIES, total_aff) #Pull out the columns we need,like EVTYPE, FATALITIES, INJURIES"
+"0","SDby_EV_sorted <- summarize(SDby_EV_mod, health_loss = sum(total_aff)) #gives just total healthloss for each EVTYPE"

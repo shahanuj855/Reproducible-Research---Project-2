@@ -1,0 +1,1 @@
+"0","ggplot(Top_TenPL, aes(x=EVTYPE, y=PropLoss)) + geom_bar(stat=""identity"")"
